@@ -53,36 +53,36 @@ public class Game {
 
     public void chooseWinner(String[] moves) {
         if (moves[0].equals(moves[1])) {
-            System.out.println(moves[0] + "vs" + moves[1] + "\nIt's a tie!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nIt's a tie!");
         }
         else if (moves[0].equals("Rock") && moves[1].equals("Paper")){
             Paper paper = new Paper("paper");
-            System.out.println(moves[0] + "vs" + moves[1] + "\nPlayer2 wins to Player1!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nPlayer2 wins to Player1! - ");
             paper.cover();
         }
         else if (moves[0].equals("Rock") && moves[1].equals("Scissors")){
             Rock rock = new Rock("rock");
-            System.out.println(moves[0] + "vs" + moves[1] + "\nPlayer1 wins to Player2!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nPlayer1 wins to Player2! - ");
             rock.crush();
         }
         else if (moves[0].equals("Paper") && moves[1].equals("Rock")){
             Paper paper = new Paper("paper");
-            System.out.println(moves[0] + "vs" + moves[1] + "\nPlayer1 wins to Player2!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nPlayer1 wins to Player2! - ");
             paper.cover();
         }
         else if (moves[0].equals("Paper") && moves[1].equals("Scissors")){
             Scissors scissors = new Scissors("scissors");
-            System.out.println(moves[0] + "vs" + moves[1] + "\nPlayer2 wins to Player1!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nPlayer2 wins to Player1! - ");
             scissors.cut();
         }
         else if (moves[0].equals("Scissors") && moves[1].equals("Rock")){
             Rock rock = new Rock("rock");
-            System.out.println(moves[0] + "vs" + moves[1] + "\nPlayer2 wins to Player1!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nPlayer2 wins to Player1! - ");
             rock.crush();
         }
         else if (moves[0].equals("Scissors") && moves[1].equals("Paper")){
             Scissors scissors = new Scissors("scissors");
-            System.out.println(moves[0] + "vs" + moves[1] + "\nPlayer1 wins to Player2!");
+            System.out.print(moves[0] + " vs " + moves[1] + "\nPlayer1 wins to Player2! - ");
             scissors.cut();
         }
     }
