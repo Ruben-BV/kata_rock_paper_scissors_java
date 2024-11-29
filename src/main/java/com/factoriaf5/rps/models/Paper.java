@@ -6,7 +6,7 @@ public class Paper extends Move {
         super(name);
     }
 
-    public void Cruch() {
+    public void cover() {
         System.out.println("Paper covers Rock");
     }
 }

@@ -6,7 +6,7 @@ public class Scissors extends Move{
         super(name);
     }
 
-    public void Cut() {
+    public void cut() {
         System.out.println("Scissors cuts paper");
     }
 }

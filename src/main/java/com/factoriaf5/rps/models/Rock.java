@@ -6,7 +6,7 @@ public class Rock extends Move{
         super(name);
     }
 
-    public void Crush() {
+    public void crush() {
         System.out.println("Rock crushes scissors");
     }
 }
