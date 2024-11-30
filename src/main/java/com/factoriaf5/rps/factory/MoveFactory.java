@@ -21,7 +21,7 @@ public class MoveFactory {
             case 5:
                 return new Spock("Spock");
             default:
-                return null; 
+                return null;
         }
     }
 }
