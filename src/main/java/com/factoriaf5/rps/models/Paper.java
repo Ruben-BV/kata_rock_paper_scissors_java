@@ -9,4 +9,8 @@ public class Paper extends Move {
     public void cover() {
         System.out.print("Paper covers Rock");
     }
+
+    public void disprove() {
+        System.out.print("Paper disproves Spock");
+    }
 }

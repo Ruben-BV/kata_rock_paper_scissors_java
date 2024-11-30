@@ -24,6 +24,10 @@ public class Player {
                 return "Paper";
             case 3:
                 return "Scissors";
+            case 4:
+                return "Lizard";
+            case 5:
+                return "Spock";
             default:
                 return "Invalid move";
         }

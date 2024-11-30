@@ -10,7 +10,7 @@ public class Computer extends Player {
 
     public String computerMove() {
         Random random = new Random();
-        int computerChoice = random.nextInt(3)+1;
+        int computerChoice = random.nextInt(5)+1;
         return super.makeMove(computerChoice);
     }
 }

@@ -9,4 +9,8 @@ public class Scissors extends Move{
     public void cut() {
         System.out.print("Scissors cuts paper");
     }
+
+    public void decapitate() {
+        System.out.print("Scissors decapitates lizard");
+    }
 }
