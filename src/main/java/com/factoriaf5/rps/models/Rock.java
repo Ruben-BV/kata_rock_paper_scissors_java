@@ -13,4 +13,5 @@ public class Rock extends Move{
     public void crushScissors() {
         System.out.print("Rock crushes scissors");
     }
+    
 }

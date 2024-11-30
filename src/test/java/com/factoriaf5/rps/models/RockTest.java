@@ -15,16 +15,30 @@ public class RockTest {
     }
 
     @Test
-    public void testCrush() {
+    public void testCrushScissors() {
         
         java.io.ByteArrayOutputStream outputStream = new java.io.ByteArrayOutputStream();
         System.setOut(new java.io.PrintStream(outputStream));
 
-        rock.crush();
+        rock.crushScissors();
 
         System.setOut(System.out);
         String result = outputStream.toString();
         assertEquals("Rock crushes scissors", result);
+    
+    }
+
+    @Test
+    public void testCrushLizard() {
+        
+        java.io.ByteArrayOutputStream outputStream = new java.io.ByteArrayOutputStream();
+        System.setOut(new java.io.PrintStream(outputStream));
+
+        rock.crushLizard();
+
+        System.setOut(System.out);
+        String result = outputStream.toString();
+        assertEquals("Rock crushes lizard", result);
     
     }
 }

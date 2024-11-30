@@ -5,25 +5,25 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ScissorsTest {
-    private Scissors scissors;
+public class SpockTest {
+    private Spock spock;
 
     @BeforeEach
     public void setUp() {
-        scissors = new Scissors("Scissors");
+        spock = new Spock("Spock");
     }
 
     @Test
-    public void testCut() {
+    public void testSmashes() {
         
         java.io.ByteArrayOutputStream outputStream = new java.io.ByteArrayOutputStream();
         System.setOut(new java.io.PrintStream(outputStream));
 
-        scissors.cut();
+        spock.smash();
 
         System.setOut(System.out);
         String result = outputStream.toString();
-        assertEquals("Scissors cuts paper", result);
+        assertEquals("Spock smashes scissors", result);
     
     }
 
@@ -33,11 +33,11 @@ public class ScissorsTest {
         java.io.ByteArrayOutputStream outputStream = new java.io.ByteArrayOutputStream();
         System.setOut(new java.io.PrintStream(outputStream));
 
-        scissors.decapitate();
+        spock.vaporize();
 
         System.setOut(System.out);
         String result = outputStream.toString();
-        assertEquals("Scissors decapitates lizard", result);
+        assertEquals("Spock vaporizes rock", result);
     
     }
 }

@@ -91,6 +91,30 @@ public class GameTest {
     }
 
     @Test
+    public void testChooseWinnerRockLizard () {
+        String[] moves = {"Rock", "Lizard"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Rock vs Lizard\nPlayer1 wins to Player2! - Rock crushes lizard", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerRockSpock () {
+        String[] moves = {"Rock", "Spock"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Rock vs Spock\nPlayer2 wins to Player1! - Spock vaporizes rock", outputStream.toString());
+    }
+
+    @Test
     public void testChooseWinnerPaperRock () {
         String[] moves = {"Paper", "Rock"};
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -115,6 +139,30 @@ public class GameTest {
     }
 
     @Test
+    public void testChooseWinnerPaperLizard () {
+        String[] moves = {"Paper", "Lizard"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Paper vs Lizard\nPlayer2 wins to Player1! - Lizard eats paper", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerPaperSpock () {
+        String[] moves = {"Paper", "Spock"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Paper vs Spock\nPlayer1 wins to Player2! - Paper disproves Spock", outputStream.toString());
+    }
+
+    @Test
     public void testChooseWinnerScissorsRock () {
         String[] moves = {"Scissors", "Rock"};
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -136,5 +184,65 @@ public class GameTest {
         game.chooseWinner(moves);
         
         assertEquals("Scissors vs Paper\nPlayer1 wins to Player2! - Scissors cuts paper", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerScissorsLizard () {
+        String[] moves = {"Scissors", "Lizard"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Scissors vs Lizard\nPlayer1 wins to Player2! - Scissors decapitates lizard", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerScissorsSpock () {
+        String[] moves = {"Scissors", "Spock"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Scissors vs Spock\nPlayer2 wins to Player1! - Spock smashes scissors", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerLizardRock () {
+        String[] moves = {"Lizard", "Rock"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Lizard vs Rock\nPlayer2 wins to Player1! - Rock crushes lizard", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerLizardPaper () {
+        String[] moves = {"Lizard", "Paper"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Lizard vs Paper\nPlayer1 wins to Player2! - Lizard eats paper", outputStream.toString());
+    }
+
+    @Test
+    public void testChooseWinnerLizardScissors () {
+        String[] moves = {"Lizard", "Scissors"};
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outputStream));
+
+        game.chooseWinner(moves);
+        
+        assertEquals("Lizard vs Scissors\nPlayer2 wins to Player1! - Scissors decapitates lizard", outputStream.toString());
     }
 }

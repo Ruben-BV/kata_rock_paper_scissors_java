@@ -37,7 +37,28 @@ public class PlayerTest {
 
     @Test
     public void testHumanMoveScissors() {
+        int choice = 3;
+        String result = player.makeMove(choice);
+        assertEquals("Scissors", result);
+    }
+
+    @Test
+    public void testHumanMoveLizard() {
         int choice = 4;
+        String result = player.makeMove(choice);
+        assertEquals("Lizard", result);
+    }
+
+    @Test
+    public void testHumanMoveSpock() {
+        int choice = 5;
+        String result = player.makeMove(choice);
+        assertEquals("Spock", result);
+    }
+
+    @Test
+    public void testHumanMoveInvalidMove() {
+        int choice = 6;
         String result = player.makeMove(choice);
         assertEquals("Invalid move", result);
     }
